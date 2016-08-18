@@ -12,7 +12,7 @@ var map = L.map('map', {
 
 // optional : customize link to view source code; add your own GitHub repository
 map.attributionControl
-.setPrefix('View <a href="http://github.com/jackdougherty/leaflet-map-flickr-precision">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+.setPrefix('View <a href="http://github.com/jackdougherty/pages-without-gh-branch">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 L.control.scale().addTo(map);
 
@@ -77,7 +77,7 @@ $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup().addTo(map);
   // Add layerGroup to your layer control and insert your label to appear in legend
-  controlLayers.addBaseLayer(layerGroup, 'Flickr photo blue markers'); // Insert your own legend label
+  controlLayers.addBaseLayer(layerGroup, 'Flickr photos via markers'); // Insert your own legend label
   // Start a loop to insert flickr photo data into photoContent
   for (var i = 0; i < data.photos.photo.length; i++) {
     var photoContent = data.photos.photo[i];
@@ -93,7 +93,7 @@ $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup();
   // Add layerGroup to your layer control and insert your label to appear in legend
-  controlLayers.addBaseLayer(layerGroup, 'Flickr photo thumbnail icons');
+  controlLayers.addBaseLayer(layerGroup, 'Flickr photo thumbnails');
   // Start a loop to insert flickr photo data into photoContent
   for (var i = 0; i < data.photos.photo.length; i++) {
     var photoContent = data.photos.photo[i];
